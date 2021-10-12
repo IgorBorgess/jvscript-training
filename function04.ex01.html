@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação com Javascript</title>
+</head>
+<body>
+    <h1>Lógica de Programação com Javascript</h1>
+    <hr>
+
+    <div id="calc">
+        <button onclick="addFunction()">+</button>
+        <button onclick="subFunction()">-</button>
+        <button onclick="multFunction()">*</button>
+        <button onclick="divFunction()">/</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        var n;
+        var n2;
+
+        function addFunction(){
+            n = prompt("Digite um número!")
+            n = parseFloat(n);
+
+            n2 = prompt("Digite outro número!");
+            n2 = parseFloat(n2);
+
+            result.innerHTML = "O resultado de " + n + " mais " + n2 + " é igual a " + (n + n2) + "!";
+        }
+
+        function subFunction(){
+            n = prompt("Digite um número!")
+            n = parseFloat(n);
+
+            n2 = prompt("Digite outro número!");
+            n2 = parseFloat(n2);
+
+            result.innerHTML = "O resultado de " + n + " menos " + n2 + " é igual a " + (n - n2) + "!";
+        }
+
+        function multFunction(){
+            n = prompt("Digite um número!")
+            n = parseFloat(n);
+
+            n2 = prompt("Digite outro número!");
+            n2 = parseFloat(n2);
+
+            result.innerHTML = "O resultado de " + n + " multiplicado por " + n2 + " é igual a " + (n * n2) + "!";
+        }
+
+        function divFunction(){
+            n = prompt("Digite um número!")
+            n = parseFloat(n);
+
+            n2 = prompt("Digite outro número!");
+            n2 = parseFloat(n2);
+
+            result.innerHTML = "O resultado de " + n + " dividido por " + n2 + " é igual a " + (n / n2) + "!";
+        }
+    </script>
+</body>
+</html>
