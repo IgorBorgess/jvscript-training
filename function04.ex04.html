@@ -21,9 +21,13 @@
     <script>
         var n = prompt("Digite um número!");
         n = parseFloat(n);
-        result.innerHTML = "O número primário é: " + n + "! Lembre-se que todas as operações terão como base ele."
+        result.innerHTML = n
 
         function iniciarCalculo(simbolo){
+
+        n = document.querySelector("#result").textContent;
+        n = parseFloat(n);
+        
         var n2 = prompt("Digite um segundo número!");
         n2 = parseFloat(n2);
 
@@ -31,6 +35,14 @@
         }
 
         function calcular(simbolo, n, n2){
+
+            if(simbolo !== "+" && simbolo !== "-" && simbolo !== "*" && simbolo !== "/"){
+                throw new Error("Digite um símbolo válido!");
+            }
+
+            if(isNaN(n) || isNaN(n2)){
+                throw new Error("Digite um número válido!");
+            }
 
             switch(simbolo){
 
@@ -47,7 +59,7 @@
                 n = n / n2;
                 break;
             }
-            result.innerHTML = "O resultado é: " + n;
+            result.innerHTML = n;
         }
     </script>
 </body>
